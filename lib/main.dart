@@ -99,11 +99,10 @@ class _InicioState extends State<Inicio> {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    FlatButton(
-                        color: colorBotones,
-                        shape: StadiumBorder(),
-                        padding:
-                            EdgeInsets.symmetric(horizontal: 60, vertical: 16),
+                    TextButton(
+                        style: ButtonStyle(
+                          backgroundColor: MaterialStateProperty.all<Color>(colorBotones),
+                        ),
                         onPressed: () {
                           setState(() {
                             qrText = miControlador.text;
